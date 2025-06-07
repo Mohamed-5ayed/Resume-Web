@@ -428,7 +428,29 @@ footer {
   .hero-right {
     height: auto;
     min-height: 50vh;
+    overflow: hidden;
+    width: 50%;
   }
+
+  .image-container img {
+    object-fit: cover;
+    border-radius: 40px;
+    height: 300px;
+  }
+
+  .image-container {
+    position: absolute;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.it-card {
+  display: none;
+}
 
   #hero {
     height: auto;
@@ -451,12 +473,22 @@ footer {
 @media (max-width: 768px) {
   .section-header h2 {
     font-size: 1.2rem;
+    margin: 25px 0;
     padding: 0.4rem 1.5rem;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
+  .hero-left {
+    width: 100%;
   }
 
   .hero-content h1 {
     font-size: 2.5rem;
   }
+
 
   .it-card {
     width: 150px;
@@ -466,5 +498,19 @@ footer {
 
   .it-card span {
     font-size: 3rem;
+  }
+
+  .icons img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+
+  .services div {
+    text-align: center;
+  }
+
+  .services i {
+    display: none;
   }
 }
