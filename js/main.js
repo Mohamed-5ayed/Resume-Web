@@ -45,9 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Form submission
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-
+    contactForm.addEventListener("submit", function () {
       // Get form values
       const formData = new FormData(contactForm);
       const formValues = Object.fromEntries(formData.entries());
@@ -55,11 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
       // Here you would typically send the data to a server
       console.log("Form submitted with values:", formValues);
 
-      // Show success message (in a real app, do this after successful submission)
-      alert("Thank you for your message! I will get back to you soon.");
-
       // Reset form
-      contactForm.reset();
+      setTimeout(() => {
+      contactForm.reset();;
+      alert('Thank you! Your message has been sent.');
+    }, 1000);
     });
   }
 
