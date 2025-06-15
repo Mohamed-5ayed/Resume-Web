@@ -2,10 +2,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Navbar scroll effect
   const navbar = document.querySelector(".navbar");
+  // const logo = document.querySelector(".navbar-brand");
 
   window.addEventListener("scroll", function () {
     if (window.scrollY > 50) {
       navbar.classList.add("navbar-scrolled");
+
     } else {
       navbar.classList.remove("navbar-scrolled");
     }
